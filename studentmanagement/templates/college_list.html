@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1> Colleges </h1>
+    <ul>
+
+        {% for college in colleges %}
+        <li>
+            <a href="{% url 'college' college.pk %}"> {{ college.name }} </a> 
+        </li>
+        {% endfor %}
+     </ul>
+</body>
+</html>
